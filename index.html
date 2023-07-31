@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filo news</title>
+
+    <link rel="stylesheet" href="css/index.css">
+     
+  <script
+    src="https://code.jquery.com/jquery-3.6.4.js"
+    integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+    crossorigin="anonymous"
+  ></script>
+  <script src="./js/index.js"></script>
+
+  <script>
+    function scrollToSection() {
+      const seccionDestino = document.getElementById('formulario');
+      seccionDestino.scrollIntoView({ behavior: 'smooth' });
+    }
+    </script>
+
+</head>
+<body>
+ <header>
+    <div class="conteiner">
+      <div class="filo">
+        <img src="./assets/img/filo.svg" />
+      </div>
+    </div>
+ </header>
+
+ <section id="hero"> 
+  <div class="container-portada">
+    <div class="portada-izquierda">
+      <h1>Te presentamos Notiflash una nueva forma de enterarte de todo en cada momento del dia !</h1>
+      <h3>¡Suscríbete a nuestro newsletter y entérate de todo lo que sucede en cada momento del día!,Personaliza tus intereses y descubre las noticias antes que nadie.!</h3>
+      <div class="boton">
+        <button onclick="scrollToSection()">Subscribite</button>
+       </div>
+    </div>
+   <div class="img-abajo">
+    <img src="./assets/img/img-derecha.png">
+   </div>
+  </div>
+ </section>
+
+ <section id="descripcion">
+   <div class="container">
+      <div class="img-container">
+        <img src="./assets/img/primera-imagen.png" alt="">
+      </div>
+
+       <div class="texto-descripcion">
+        <h1>100% personalizado</h1>
+        <h3>personaliza lo que queres recibir y enterate las ultimas noticias de tu equipo favorito,los ultimos eventos, que esta pasando en el pais y mas, recibi contenido en audio,video o breves textos!</h3>
+       </div>
+   </div>
+  </section>
+
+ <section id="principales-opciones">
+   <h1>Principales Opciones</h1>
+  <div class="container-cards">
+      <div class="cards">
+         <img src="./assets/img/card-1.jpg" alt="">
+        <h2>Futbol</h2>
+        <h3>¿Qué ocurre con tu equipo favorito? Encuentra noticias, resúmenes de partidos, novedades del club y más!</h3>
+      </div>
+      <div class="cards">
+        <img src="./assets/img/card-2.jpg" alt="">
+        <h2>Actualidad</h2>
+        <h3>Infórmate sobre lo que sucede en el país y el mundo, desde noticias relevantes hasta cuestiones políticas!</h3>
+      </div>
+      <div class="cards">
+        <img src="./assets/img/card-3.jpg" alt="">
+        <h2>Espectaculos</h2>
+        <h3>Descubre las últimas noticias de los próximos eventos, información sobre fiestas y eventos en la ciudad y más!</h3>
+      </div>
+   </div>
+ </section>
+
+ <section id="preguntas">
+      <div class="conteiner-preguntas">
+        <h1>Preguntas frecuentes</h1>
+      </div>
+     <div class="preguntas">
+      <details>
+        <summary>¿Hasta cuantas opciones puedo elegir?</summary>
+         <p>De momento tenemos un número limitado de opciones para elegir, pero estamos trabajando en agregar más temas para que puedas encontrar lo que te gusta. ¡Estate atento a las novedades!</p>
+       </details> 
+  
+       <details>
+        <summary>¿La Subscripcion tiene algún costo ?</summary>
+         <p>la subscripcion no tiene ningun costo de mantencion, ni de servicio</p>
+       </details> 
+  
+       <details>
+        <summary>¿Puedo dar de baja cuando quiera?</summary>
+         <p>
+          ¡Por supuesto! Si no te interesa seguir recibiendo nuestras noticias, podés darte de baja fácilmente cuando recibas la información. ¡Sin ningún problema!</p>
+       </details> 
+  
+       <details>
+        <summary>¿Es necesario tener una cuenta para recibir las noticias?</summary>
+         <p>Por supuesto, no tenés que crear una cuenta ni nada por el estilo, solo tenés que llenar el formulario y listo. ¡Fácil y rápido! </p>
+       </details> 
+    </div>
+ </section>
+
+ <section id="formulario">
+    <div class="imagen-formulario">
+      <h1>Subscribite ahora y cambia tu forma de informarte!</h1>
+      <img src="/assets/img/formulario.png" alt="">
+    </div>
+
+      <div class="formulario-campos">
+        <div class="opciones">
+          <form id="formulario-principal" action="#">
+            <div class="form-row">
+              <label for="nombre">Nombre:</label>
+              <input required type="text" name="nombre" id="nombre" />
+            </div>
+  
+            <div class="form-row">
+              <label required for="email">Email:</label>
+              <input type="email" name="email" id="email" />
+            </div>
+            
+            <div class="form-row">
+              <label for="provincia">Seleccioná una seccion:</label>
+              <select name="provincia" id="provincia">
+                <option value="Futbol">Futbol</option>
+                <option value="Actualidad">Actualidad</option>
+                <option value="Espectaculos">Espectaculos</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="provincia">Seleccioná tu interes:</label>
+              <select name="provincia" id="provincia">
+                <option value="River">River</option>
+                <option value="Boca">Boca</option>
+                <option value="Eventos nacionales">Eventos </option>
+                <option value="Eventos Internacionales">Eventos </option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <input type="submit" value="Enviar" />
+            </div>
+          </form>
+        </div>
+      </div>
+         
+      <div class="popup-contenedor oculto feedback">
+        <div class="popup">
+          <div class="cerrar">X</div>
+          <h1>Gracias por Subscribirte a Notiflash!</h1>
+          <p>
+            <span id="dato-nombre">Nombre</span> ¡Genial! ¡Ya eres parte de nuestra comunidad! Gracias por suscribirte a nuestro newsletter, ahora estarás al tanto de todas las novedades, pronto llegaran a tu casilla de
+            <span id="dato-email">nombreyapellido@mail.com.</span>
+          </p>
+        </div>
+      </div>
+
+      
+ </section>
+
+ <footer>
+    <nav>
+      <div class="logo-container">
+        <img src="./assets/img/filo.svg" />
+      </div>
+      <div class="segunda-fila">
+        <ul>
+          <li><a href="https://www.facebook.com/filonews"><img src="/assets/img/icono-facebookpng.png" alt=""></a></li>
+          <li><a href="https://twitter.com/filonewsOK"><img src="/assets/img/icono-twitter.png" alt=""></a></li>
+          <li><a href="https://www.instagram.com/filonewsok/"><img src="/assets/img/icono-instagram.png" alt=""></a></li>
+          <li><a href="https://www.youtube.com/channel/UC9vs8KujZ2kJ2hbg01fNRVw/videos?sub_confirmation=1"><img src="/assets/img/icono-youtube.png" alt=""></a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <nav class="primera-fila">
+    <div class="columna-1">
+      <ul>
+        <li><a href="#">newslatters</a></li>
+        <li><a href="#">Sobre Filo.news</a></li>
+        <li><a href="#">Terminos y condiciones</a></li>
+        <li><a href="#">Politicas y Privacidad</a></li>
+      </ul>
+    </div>
+  </nav>
+</footer>
+
+</body>
+</html>
